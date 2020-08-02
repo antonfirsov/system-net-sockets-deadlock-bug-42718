@@ -9,7 +9,7 @@ using Xunit.Abstractions;
 
 namespace system_net_sockets_deadlock_bug_42718 {
 	public abstract class SendReceive<T> : SocketTestHelperBase<T> where T : SocketHelperBase, new() {
-		[Fact]
+		[Fact(Timeout = 100000)]
         public async Task ReceiveAsync_ConcurrentShutdownClose_SucceedsOrThrowsAppropriateException()
         {
             if (UsesSync) return;

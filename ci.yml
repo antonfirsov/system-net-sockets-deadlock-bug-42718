@@ -15,10 +15,10 @@ jobs:
   - checkout: self 
     fetchDepth: 1
   - task: UseDotNet@1
-    displayName: 'Install .NET Core 3.x SDK'
+    displayName: 'Install 5.0.100-preview.7 SDK'
     inputs:
       packageType: 'sdk'
-      version: '3.1.302'
+      version: '5.0.100-preview.7'
   - bash: dotnet test -v normal --logger trx
     displayName: Run Tests
   - task: PublishTestResults@2

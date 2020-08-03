@@ -18,8 +18,8 @@ jobs:
     displayName: 'Install .NET 5 SDK'
     inputs:
       packageType: 'sdk'
+      version: '5.0.x'
       includePreviewVersions: true
-      version: '5.0.100'
   - bash: dotnet test -v normal --logger trx
     displayName: Run Tests
   - task: PublishTestResults@2

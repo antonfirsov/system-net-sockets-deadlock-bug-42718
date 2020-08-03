@@ -10,7 +10,7 @@ jobs:
   displayName: 'macOS x64'
   timeoutInMinutes: 60
   pool:
-    vmImage: 'macOS-10.15'
+    vmImage: 'macOS-10.14'
   steps:
   - checkout: self 
     fetchDepth: 1
@@ -26,7 +26,7 @@ jobs:
     displayName: Publish Test Results
     condition: succeededOrFailed()
     inputs:
-      testRunTitle: "MacOS 10.15"
-      platform: "MacOS 10.15"
+      testRunTitle: "MacOS 10.14"
+      platform: "MacOS 10.14"
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
